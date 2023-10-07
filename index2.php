@@ -121,6 +121,15 @@ $registros = mysqli_num_rows ($resultado);
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+      .example-div {
+  box-shadow: -5px 5px red;
+}
+
+.example-div {
+  border: 1px solid black;
+  box-shadow: -5px 5px red;
+}
     </style>
 
     
@@ -222,13 +231,14 @@ $registros = mysqli_num_rows ($resultado);
               <p class="card-text"><?php echo $row['PRECIO']; ?></p>
               <p class="card-text"><?php echo $row['DESCUENTO']; ?></p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">Comprar</button>
-                </div>
+					<div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.location.href='ver.php'">Ver</button>
+          <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.location.href='compra.php'">Comprar</button>
+					</div>
               </div>
             </div>
           </div>
-        </div>
+        </div>  
         <?php } ?>
       </div>
     </div>
